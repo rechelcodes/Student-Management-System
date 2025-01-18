@@ -37,7 +37,8 @@ class StudentManagementSystem:
             print("\n" + "-" * 30)
             print(f"{'Student List':^30}")
             print("=" * 30)
-            for index, student in enumerate(StudentManagementSystem.students, start=1):
+            index = 1
+            for student in StudentManagementSystem.students:
                 print(f"\nStudent {index}")
                 print("-" * 30)
                 print(f"Name: {student['name']}")
@@ -45,6 +46,7 @@ class StudentManagementSystem:
                 print(f"Department: {student['department']}")
                 print(f"Degree: {student['degree']}")
                 print("-" * 30)
+                index += 1
 
     def search_student(self):
         roll = input("\nEnter the ID you want to search: ")
